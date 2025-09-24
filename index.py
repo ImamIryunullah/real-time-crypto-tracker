@@ -5,9 +5,10 @@ from datetime import datetime
 import threading
 import sys
 import select
-import msvcrt
 import os
 import random
+if os.name == "nt":
+    import msvcrt
 from rich.console import Console
 from rich.table import Table
 from rich.live import Live
